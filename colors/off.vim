@@ -17,6 +17,7 @@ endif
 
 let g:colors_name='off'
 
+let s:clear           = { "gui": "none",    "cterm": "none"}
 let s:black           = { "gui": "#212121", "cterm": "0"   }
 let s:medium_gray     = { "gui": "#767676", "cterm": "243" }
 let s:white           = { "gui": "#F1F1F1", "cterm": "15"  }
@@ -44,7 +45,7 @@ let s:yellow          = { "gui": "#F3E430", "cterm": "11"  }
 let s:dark_yellow     = { "gui": "#A89C14", "cterm": "3"   }
 
 if &background == "dark"
-  let s:bg              = s:black
+  let s:bg              = s:clear
   let s:bg_subtle       = s:light_black
   let s:bg_very_subtle  = s:subtle_black
   let s:norm            = s:lighter_gray
@@ -55,7 +56,7 @@ if &background == "dark"
   let s:red             = s:light_red
   let s:visual          = s:lighter_black
 else
-  let s:bg              = s:actual_white
+  let s:bg              = s:clear
   let s:bg_subtle       = s:light_gray
   let s:bg_very_subtle  = s:lighter_gray
   let s:norm            = s:light_black
